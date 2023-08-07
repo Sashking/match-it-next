@@ -2,7 +2,9 @@ import ClothingItemCard from '../components/ClothingItemCard'
 import NewItemButton from '../components/NewItemButton'
 
 async function getData() {
-	const res = await fetch(process.env.URL + '/api/wardrobe')
+	const res = await fetch(
+		(process.env.VERCEL_URL || process.env.URL) + '/api/wardrobe'
+	)
 	return res.json()
 }
 
@@ -12,8 +14,8 @@ export default async function Wardrobe() {
 	return (
 		<>
 			<h1 className="text-2xl font-bold pb-4">Your wardrobe</h1>
-			<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3'>
-        <NewItemButton />
+			<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+				<NewItemButton />
 				{data.map((item, index) => (
 					<ClothingItemCard
 						key={index}

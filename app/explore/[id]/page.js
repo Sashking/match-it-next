@@ -2,7 +2,9 @@ import OutfitItemCard from '@/app/components/OutfitItemCard'
 import Image from 'next/image'
 
 async function getData(id) {
-	const res = await fetch(`${process.env.URL}/api/outfits/${id}`)
+	const res = await fetch(
+		`${process.env.VERCEL_URL || process.env.URL}/api/outfits/${id}`
+	)
 	return res.json()
 }
 

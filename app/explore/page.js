@@ -1,7 +1,9 @@
 import OutfitCard from '../components/OutfitCard'
 
 async function getData() {
-	const res = await fetch(process.env.URL + '/api/outfits')
+	const res = await fetch(
+		(process.env.VERCEL_URL || process.env.URL) + '/api/outfits'
+	)
 	return res.json()
 }
 
@@ -15,11 +17,18 @@ export default async function Explore() {
 				{data.map((item, index) => (
 					<OutfitCard
 						key={index}
-            id={item._id}
+						id={item._id}
 						image={item.image}
 						name={item.clothes.map((item) => item.name).join(', ')}
-						price={item.clothes.reduce((acc, item) => (item.inWardrobe ? acc : acc + item.price), 0)}
-            inWardrobe={item.clothes.reduce((acc, item) => (item.inWardrobe ? acc + 1 : acc), 0)}
+						price={item.clothes.reduce(
+							(acc, item) =>
+								item.inWardrobe ? acc : acc + item.price,
+							0
+						)}
+						inWardrobe={item.clothes.reduce(
+							(acc, item) => (item.inWardrobe ? acc + 1 : acc),
+							0
+						)}
 					/>
 				))}
 			</div>
