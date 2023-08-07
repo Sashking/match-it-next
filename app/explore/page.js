@@ -1,10 +1,8 @@
 import OutfitCard from '../components/OutfitCard'
 
 async function getData() {
-	const res = await fetch(
-		(process.env.VERCEL_URL || process.env.URL) + '/api/outfits'
-	)
-	return res.json()
+	const res = await import('../api/outfits/route')
+	return await (await res.GET()).json()
 }
 
 export default async function Explore() {

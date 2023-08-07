@@ -10,16 +10,16 @@ export async function GET() {
 	return NextResponse.json(res)
 }
 
-export async function POST(request) {
-	await connectMongo()
+// export async function POST(request) {
+// 	await connectMongo()
 
-	const data = await request.json()
+// 	const data = await request.json()
 
-	const newItem = new clothes(data)
-	await newItem.save()
+// 	const newItem = new clothes(data)
+// 	await newItem.save()
 
-	return NextResponse.json(newItem)
-}
+// 	return NextResponse.json(newItem)
+// }
 
 // export async function PATCH(itemId) {
 // 	await connectMongo()

@@ -2,10 +2,8 @@ import ClothingItemCard from '../components/ClothingItemCard'
 import NewItemButton from '../components/NewItemButton'
 
 async function getData() {
-	const res = await fetch(
-		(process.env.VERCEL_URL || process.env.URL) + '/api/wardrobe'
-	)
-	return res.json()
+  const res = await import('../api/wardrobe/route')
+	return await (await res.GET()).json()
 }
 
 export default async function Wardrobe() {
