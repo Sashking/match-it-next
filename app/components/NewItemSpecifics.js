@@ -95,7 +95,7 @@ export default function NewItemSpecifics({ category, subcategory, types }) {
 
 				<Listbox value={selectedColor} onChange={setSelectedColor}>
 					<Listbox.Button className="flex items-center justify-between border-2 border-black rounded-lg">
-						<p className="px-8 py-4 flex items-center gap-3">
+						<div className="px-8 py-4 flex items-center gap-3">
 							{selectedColor ? (
 								<>
 									<div
@@ -109,7 +109,7 @@ export default function NewItemSpecifics({ category, subcategory, types }) {
 							) : (
 								'--Select color--'
 							)}
-						</p>
+						</div>
 						<div className="mr-4">
 							<UilDirection />
 						</div>
