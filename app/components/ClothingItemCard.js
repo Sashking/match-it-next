@@ -7,7 +7,8 @@ export default function ClothingItemCard({ name, image, category }) {
 				<Image
 					src={image}
 					alt={name}
-					layout="fill"
+					fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 					className="rounded-t-lg object-cover group-hover:object-contain"
 				/>
 			</div>

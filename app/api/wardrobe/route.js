@@ -1,6 +1,6 @@
-import { NextResponse } from 'next/server'
 import connectMongo from '@/utils/dbConfig'
 import clothes from '@/models/clothes'
+import { NextResponse } from 'next/server'
 
 export async function GET() {
 	await connectMongo()

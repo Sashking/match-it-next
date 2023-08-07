@@ -1,9 +1,10 @@
+import { GET } from '../api/wardrobe/route'
 import ClothingItemCard from '../components/ClothingItemCard'
 import NewItemButton from '../components/NewItemButton'
 
 async function getData() {
-  const res = await import('../api/wardrobe/route')
-	return await (await res.GET()).json()
+  const res = await GET()
+	return res.json()
 }
 
 export default async function Wardrobe() {

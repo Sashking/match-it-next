@@ -1,8 +1,9 @@
+import { GET } from '../api/outfits/route'
 import OutfitCard from '../components/OutfitCard'
 
 async function getData() {
-	const res = await import('../api/outfits/route')
-	return await (await res.GET()).json()
+	const res = await GET()
+	return res.json()
 }
 
 export default async function Explore() {

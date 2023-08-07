@@ -1,8 +1,11 @@
 import OutfitItemCard from '@/app/components/OutfitItemCard'
+import connectMongo from '@/utils/dbConfig'
+import outfits from '@/models/outfit'
 
 async function getData(id) {
-	const res = await import('../../api/outfits/route')
-	return await (await res.GET(id)).json()
+	await connectMongo()
+
+	return await outfits.findById(id).populate('clothes')
 }
 
 export default async function Outfit({ params }) {
