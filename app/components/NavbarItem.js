@@ -11,10 +11,10 @@ export default function NavbarItem({ name, icon, link }) {
 			<div
 				className={`${
 					isActive ? 'bg-black text-white' : 'hover:bg-black/10'
-				} px-6 py-2 rounded-lg flex items-center`}
+				} px-6 py-2 rounded-lg flex items-center gap-2`}
 			>
-				<div className="mr-2">{icon}</div>
-				<p className="font-medium">{name}</p>
+				<div>{icon}</div>
+				<p className="font-medium hidden md:block">{name}</p>
 			</div>
 		</Link>
 	)

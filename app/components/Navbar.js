@@ -19,11 +19,11 @@ export default function Navbar() {
 
   // justify-between
 	return (
-		<nav className="px-10 flex items-center">
+		<nav className="flex items-center justify-between md:justify-start">
 			<Link href={'/'}>
 				<p className="font-bold text-3xl">m.i</p>
 			</Link>
-			<div className="flex my-4 mx-16 gap-6">
+			<div className="flex my-4 ml-16 gap-6">
 				{navItems.map((item, index) => (
 					<NavbarItem
 						key={index}
