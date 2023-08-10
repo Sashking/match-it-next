@@ -34,3 +34,5 @@ export default async function Explore() {
 		</>
 	)
 }
+
+export const dynamic = 'force-dynamic'

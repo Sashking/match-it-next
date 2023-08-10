@@ -31,3 +31,5 @@ export default async function Outfit({ params }) {
 		</>
 	)
 }
+
+export const dynamic = 'force-dynamic'
