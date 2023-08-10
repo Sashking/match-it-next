@@ -1,3 +1,5 @@
+'use server'
+
 import NewItemForm from '@/app/components/NewItemForm'
 
 export default function New() {
