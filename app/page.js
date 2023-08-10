@@ -16,7 +16,7 @@ export default async function Home() {
 				{data.map((arrayOfItems, index) => (
 					<div
 						key={index}
-						className="grid grid-cols-3 md:grid-cols-4 gap-3"
+						className="grid grid-cols-2 md:grid-cols-4 gap-3"
 					>
 						{arrayOfItems.map((item, index) => (
 							<MatchingItemCard
