@@ -4,7 +4,7 @@ import { useState } from 'react'
 import NewItemFormCategory from './NewItemFormCategory'
 import NewItemSpecificsPage from './NewItemSpecificsPage.js'
 
-export default function NewItemForm() {
+export default function NewItemForm({ handleSubmit }) {
 	const categories = [
 		{
 			name: 'Tops',
@@ -270,7 +270,7 @@ export default function NewItemForm() {
 	return (
 		<>
 			{specifics ? (
-				<NewItemSpecificsPage category={selectedCategory} subcategory={selectedSubcategory} types={typeData} />
+				<NewItemSpecificsPage category={selectedCategory} subcategory={selectedSubcategory} types={typeData} handleSubmit={handleSubmit} />
 			) : (
 				<div className="flex flex-col gap-2">
 					{categories.map(
