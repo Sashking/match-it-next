@@ -63,16 +63,6 @@ export default function NewItemSpecifics({
 		selectedType ? setTypeError('') : setTypeError('Please select a type.')
 
 		if (selectedColor && selectedType) {
-			setColorError('')
-			setTypeError('')
-
-			handleReturn({
-				category,
-				subcategory,
-				type: selectedType.name,
-				color: selectedColor.name
-			})
-
 			router.push('/wardrobe')
 		}
 	}
@@ -158,6 +148,12 @@ export default function NewItemSpecifics({
 			<button
 				className="container absolute bottom-8 left-1/2 transform -translate-x-1/2 flex w-full items-center justify-between bg-black text-white py-4 px-6 rounded-lg"
 				onClick={handleSubmit}
+				action={handleReturn({
+					category,
+					subcategory,
+					type: selectedType.name,
+					color: selectedColor.name
+				})}
 			>
 				<p className="font-semibold">Add to Wardrobe</p>
 				<UilPlus size={20} />

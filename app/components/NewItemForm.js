@@ -4,7 +4,7 @@ import { useState } from 'react'
 import NewItemFormCategory from './NewItemFormCategory'
 import NewItemSpecificsPage from './NewItemSpecificsPage.js'
 
-export default function NewItemForm({ handleSubmit }) {
+export default function NewItemForm() {
 	const categories = [
 		{
 			name: 'Tops',
@@ -251,9 +251,9 @@ export default function NewItemForm({ handleSubmit }) {
 	const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(-1)
 	const [specifics, setSpecifics] = useState(false)
 
-  const [selectedCategory, setSelectedCategory] = useState('')
-  const [selectedSubcategory, setSelectedSubcategory] = useState('')
-  const [typeData, setTypeData] = useState(null)
+  	const [selectedCategory, setSelectedCategory] = useState('')
+  	const [selectedSubcategory, setSelectedSubcategory] = useState('')
+  	const [typeData, setTypeData] = useState(null)
 
 	const handleCategoryClick = (index) =>
 		selectedCategoryIndex === index
@@ -265,6 +265,20 @@ export default function NewItemForm({ handleSubmit }) {
     setSelectedCategory(categories[selectedCategoryIndex].name)
     setSelectedSubcategory(categories[selectedCategoryIndex].subcategories[index].name)
     setTypeData(categories[selectedCategoryIndex].subcategories[index].types)
+	}
+
+	async function handleSubmit(data) {
+		'use server'
+
+		// async function getData(value) {
+		// 	await connectMongo()
+		  
+		// 	await clothes.updateOne(value, { inWardrobe: true })
+		  
+		// 	return await outfits.findById(id).populate('clothes')
+		// }
+
+		console.log(data)
 	}
 
 	return (
