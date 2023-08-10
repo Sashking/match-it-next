@@ -54,9 +54,7 @@ export default function NewItemSpecifics({
 		}
 	]
 
-	const handleSubmit = async (e) => {
-		e.preventDefault()
-
+	const handleSubmit = () => {
 		selectedColor
 			? setColorError('')
 			: setColorError('Please select a color.')
@@ -71,6 +69,7 @@ export default function NewItemSpecifics({
 			})
 
 			router.push('/wardrobe')
+			router.refresh()
 		}
 	}
 

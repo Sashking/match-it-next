@@ -27,8 +27,8 @@ export default async function Styles() {
 									key={index}
 									name={item.name}
 									image={item.image}
-                  tag={item.price + ' Kč'} 
-                  //TODO: ^ replace with price / in wardrobe
+                  					tag={item.inWardrobe ? 'In wardrobe' : item.price + ' Kč'} 
+									//TODO: ^ replace with price / in wardrobe
 								/>
 							))}
 						</div>

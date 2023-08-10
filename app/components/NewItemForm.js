@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import NewItemFormCategory from './NewItemFormCategory'
-import NewItemSpecificsPage from './NewItemSpecificsPage.js'
+import NewItemSpecifics from './NewItemSpecifics.js'
 
 export default function NewItemForm({ handleReturn }) {
 	const categories = [
@@ -262,15 +262,15 @@ export default function NewItemForm({ handleReturn }) {
 
 	const handleSubcategoryClick = (index) => {
 		setSpecifics(true)
-    setSelectedCategory(categories[selectedCategoryIndex].name)
-    setSelectedSubcategory(categories[selectedCategoryIndex].subcategories[index].name)
-    setTypeData(categories[selectedCategoryIndex].subcategories[index].types)
+    	setSelectedCategory(categories[selectedCategoryIndex].name)
+    	setSelectedSubcategory(categories[selectedCategoryIndex].subcategories[index].name)
+    	setTypeData(categories[selectedCategoryIndex].subcategories[index].types)
 	}
 
 	return (
 		<>
 			{specifics ? (
-				<NewItemSpecificsPage category={selectedCategory} subcategory={selectedSubcategory} types={typeData} handleReturn={handleReturn} />
+				<NewItemSpecifics category={selectedCategory} subcategory={selectedSubcategory} types={typeData} handleReturn={handleReturn} />
 			) : (
 				<div className="flex flex-col gap-2">
 					{categories.map(

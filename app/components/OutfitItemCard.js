@@ -3,6 +3,14 @@ import Link from 'next/link'
 import CardTag from './CardTag'
 
 export default function OutfitCard({ name, image, category, tag }) {
+	const categoryTagColors = {
+		Tops: 'bg-blue-100 text-blue-900',
+		Bottoms: 'bg-yellow-100 text-yellow-900',
+		Outerwear: 'bg-red-100 text-red-900',
+		Footwear: 'bg-green-100 text-green-900',
+		Accessories: 'bg-purple-100 text-purple-900',
+	}
+
 	return (
 		<Link
 			href={`https://example.org/${name}`}
@@ -21,13 +29,9 @@ export default function OutfitCard({ name, image, category, tag }) {
 					<CardTag text={tag} />
 				</div>
 
-				<Image
-					src={`/${category}.svg`}
-					alt={category}
-					width={40}
-					height={40}
-					className="absolute left-2 top-2 rounded-full p-2.5 bg-white"
-				/>
+				<div className={`absolute left-2 top-2 rounded-lg px-3 py-1 text-xs ${categoryTagColors[category]}`}>
+					{category}
+				</div>
 			</div>
 
 			<p className="border-t-2 border-black p-2 font-semibold">{name}</p>

@@ -1,6 +1,14 @@
 import Image from 'next/image'
 
 export default function ClothingItemCard({ name, image, category }) {
+	const categoryTagColors = {
+		Tops: 'bg-blue-100 text-blue-900',
+		Bottoms: 'bg-yellow-100 text-yellow-900',
+		Outerwear: 'bg-red-100 text-red-900',
+		Footwear: 'bg-green-100 text-green-900',
+		Accessories: 'bg-purple-100 text-purple-900',
+	}
+
 	return (
 		<div className="relative w-full rounded-lg border-2 border-black group select-none">
 			<div className="relative aspect-square w-full">
@@ -15,13 +23,9 @@ export default function ClothingItemCard({ name, image, category }) {
 
 			<p className="border-t-2 border-black p-2 font-semibold">{name}</p>
 
-			<Image
-				src={`/${category}.svg`}
-				alt={category}
-				width={40}
-				height={40}
-				className="absolute left-2 top-2 rounded-full p-2.5 bg-white"
-			/>
+			<div className={`absolute left-2 top-2 rounded-lg px-3 py-1 text-xs ${categoryTagColors[category]}`}>
+				{category}
+			</div>
 		</div>
 	)
 }
