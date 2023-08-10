@@ -1,13 +1,23 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { Listbox } from '@headlessui/react'
 import UilDirection from '@iconscout/react-unicons/icons/uil-direction'
 import UilPlus from '@iconscout/react-unicons/icons/uil-plus'
 
-export default function NewItemSpecifics({ category, subcategory, types }) {
+export default function NewItemSpecifics({
+	category,
+	subcategory,
+	types,
+	handleReturn
+}) {
+	const router = useRouter()
+
 	const [selectedType, setSelectedType] = useState(null)
 	const [selectedColor, setSelectedColor] = useState(null)
+	const [colorError, setColorError] = useState('')
+	const [typeError, setTypeError] = useState('')
 
 	const colors = [
 		{
@@ -44,20 +54,27 @@ export default function NewItemSpecifics({ category, subcategory, types }) {
 		}
 	]
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault()
 
-		console.log({
-			name: `${selectedColor.name} ${selectedType.name}`,
-			image: '',
-			inWardrobe: true,
-			price: 0,
-			category,
-			subcategory,
-			type: selectedType.name,
-			color: selectedColor.name,
-			styles: []
-		})
+		selectedColor
+			? setColorError('')
+			: setColorError('Please select a color.')
+		selectedType ? setTypeError('') : setTypeError('Please select a type.')
+
+		if (selectedColor && selectedType) {
+			setColorError('')
+			setTypeError('')
+
+			handleReturn({
+				category,
+				subcategory,
+				type: selectedType.name,
+				color: selectedColor.name
+			})
+
+			router.push('/wardrobe')
+		}
 	}
 
 	return (
@@ -91,6 +108,9 @@ export default function NewItemSpecifics({ category, subcategory, types }) {
 							))}
 						</Listbox.Options>
 					</Listbox>
+				)}
+				{typeError && (
+					<p className="text-red-500 text-sm">{typeError}</p>
 				)}
 
 				<Listbox value={selectedColor} onChange={setSelectedColor}>
@@ -130,12 +150,14 @@ export default function NewItemSpecifics({ category, subcategory, types }) {
 						))}
 					</Listbox.Options>
 				</Listbox>
+				{colorError && (
+					<p className="text-red-500 text-sm">{colorError}</p>
+				)}
 			</div>
 
 			<button
 				className="container absolute bottom-8 left-1/2 transform -translate-x-1/2 flex w-full items-center justify-between bg-black text-white py-4 px-6 rounded-lg"
 				onClick={handleSubmit}
-				type="submit"
 			>
 				<p className="font-semibold">Add to Wardrobe</p>
 				<UilPlus size={20} />

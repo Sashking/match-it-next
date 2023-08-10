@@ -15,16 +15,16 @@ export async function GET() {
 
 // 	const data = await request.json()
 
-// 	const newItem = new clothes(data)
-// 	await newItem.save()
+//   // check if item already exists
+
 
 // 	return NextResponse.json(newItem)
 // }
 
-// export async function PATCH(itemId) {
+// export async function PATCH({ category, subcategory, type, color }) {
 // 	await connectMongo()
 
-// 	await clothes.updateOne({ _id: itemId }, { inWardrobe: true })
+// 	await clothes.updateOne({ category, subcategory, type, color }, { inWardrobe: true })
 
 // 	return NextResponse.redirect('/wardrobe')
 // }
