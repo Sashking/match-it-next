@@ -88,6 +88,9 @@ export default function NewItemForm({ handleReturn }) {
 				{
 					name: 'Sneakers',
 				},
+				{
+					name: 'Dress shoes'
+				}
 			]
 		}
 	]
