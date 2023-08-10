@@ -12,11 +12,11 @@ export default async function Home() {
 	return (
 		<>
 			<h1 className="text-2xl font-bold pb-4">Home</h1>
-			<div className="flex flex-col gap-3 mb-16">
+			<div className="flex flex-col gap-16 mb-16">
 				{data.map((arrayOfItems, index) => (
 					<div
 						key={index}
-						className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3"
+						className="grid grid-cols-3 md:grid-cols-4 gap-3"
 					>
 						{arrayOfItems.map((item, index) => (
 							<MatchingItemCard
