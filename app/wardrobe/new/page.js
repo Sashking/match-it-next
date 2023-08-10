@@ -1,9 +1,9 @@
 import NewItemForm from '@/app/components/NewItemForm'
 
 export default function New() {
-	function handleSubmit(data) {
+	async function handleSubmit(data) {
 		'use server'
-		
+
 		// async function getData(value) {
 		// 	await connectMongo()
 		  
