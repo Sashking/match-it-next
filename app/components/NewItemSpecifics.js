@@ -25,16 +25,12 @@ export default function NewItemSpecifics({
 			hex: '262729'
 		},
 		{
+			name: 'White',
+			hex: 'e8eaec'
+		},
+		{
 			name: 'Blue',
 			hex: '526c9c'
-		},
-		{
-			name: 'Gray',
-			hex: '555555'
-		},
-		{
-			name: 'Khaki',
-			hex: 'bd9065'
 		},
 		{
 			name: 'Beige',
@@ -43,10 +39,6 @@ export default function NewItemSpecifics({
 		{
 			name: 'Olive',
 			hex: '42482e'
-		},
-		{
-			name: 'White',
-			hex: 'e8eaec'
 		},
 		{
 			name: 'Burgundy',

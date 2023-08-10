@@ -17,9 +17,6 @@ export default function NewItemForm({ handleReturn }) {
 						},
 						{
 							name: 'Long-sleeved'
-						},
-						{
-							name: 'Graphic t-shirts'
 						}
 					]
 				},
@@ -36,15 +33,79 @@ export default function NewItemForm({ handleReturn }) {
 							name: 'Blouses'
 						}
 					]
+				}
+			]
+		},
+		{
+			name: 'Bottoms',
+			subcategories: [
+				{
+					name: 'Pants',
+					types: [
+						{
+							name: 'Dress pants'
+						},
+						{
+							name: 'Chinos'
+						},
+						{
+							name: 'Trousers'
+						}
+          			]
 				},
+				{
+					name: 'Jeans',
+				},
+				{
+					name: 'Shorts',
+					types: [
+						{
+							name: 'Denim shorts'
+						},
+						{
+							name: 'Chino shorts'
+						}
+					]
+				},
+				{
+					name: 'Skirts',
+				}
+			]
+		},
+		{
+			name: 'Outerwear',
+			subcategories: [
+				{
+					name: 'Jackets',
+					types: [
+						{
+							name: 'Bomber jackets'
+						},
+						{
+							name: 'Denim jackets'
+						}
+					]
+				},
+				{
+					name: 'Coats',
+					types: [
+						{
+							name: 'Trench coats'
+						},
+						{
+							name: 'Peacoats'
+						},
+						{
+							name: 'Parkas'
+						}
+					]
+				},
+				,
 				{
 					name: 'Sweaters',
 					types: [
 						{
 							name: 'Pullover'
-						},
-						{
-							name: 'Cardigan'
 						},
 						{
 							name: 'Turtleneck'
@@ -61,97 +122,6 @@ export default function NewItemForm({ handleReturn }) {
 							name: 'Pullover'
 						}
 					]
-				}
-			]
-		},
-		{
-			name: 'Bottoms',
-			subcategories: [
-				{
-					name: 'Pants',
-          types: [
-            {
-              name: 'Dress pants'
-            },
-            {
-              name: 'Chinos'
-            },
-            {
-              name: 'Trousers'
-            }
-          ]
-				},
-				{
-					name: 'Jeans',
-          types: [
-            {
-              name: 'Skinny jeans'
-            },
-            {
-              name: 'Straight jeans'
-            },
-            {
-              name: 'Bootcut jeans'
-            }
-          ]
-				},
-				{
-					name: 'Shorts',
-          types: [
-            {
-              name: 'Denim shorts'
-            },
-            {
-              name: 'Chino shorts'
-            }
-          ]
-				},
-				{
-					name: 'Skirts',
-          types: [
-            {
-              name: 'Mini skirts'
-            },
-            {
-              name: 'Midi skirts'
-            },
-            {
-              name: 'Maxi skirts'
-            }
-          ]
-				}
-			]
-		},
-		{
-			name: 'Outerwear',
-			subcategories: [
-				{
-					name: 'Jackets',
-          types: [
-            {
-              name: 'Bomber jackets'
-            },
-            {
-              name: 'Denim jackets'
-            },
-            {
-              name: 'Leather jackets'
-            }
-          ]
-				},
-				{
-					name: 'Coats',
-          types: [
-            {
-              name: 'Trench coats'
-            },
-            {
-              name: 'Peacoats'
-            },
-            {
-              name: 'Parkas'
-            }
-          ]
 				},
 				{
 					name: 'Blazers'
@@ -166,83 +136,26 @@ export default function NewItemForm({ handleReturn }) {
 			subcategories: [
 				{
 					name: 'Sneakers',
-          types: [
-            {
-              name: 'Casual sneakers'
-            },
-            {
-              name: 'Athletic sneakers'
-            }
-          ]
+					types: [
+						{
+							name: 'Casual sneakers'
+						},
+						{
+							name: 'Athletic sneakers'
+						}
+					]
 				},
 				{
-					name: 'Boots',
-          types: [
-            {
-              name: 'Ankle boots'
-            },
-            {
-              name: 'Knee-high boots'
-            }
-          ]
+					name: 'Boots'
 				},
 				{
-					name: 'Sandals',
-          types: [
-            {
-              name: 'Flip-flops'
-            },
-            {
-              name: 'Slides'
-            }
-          ]
+					name: 'Sandals'
 				},
 				{
-					name: 'Heels',
-          types: [
-            {
-              name: 'Pumps'
-            },
-            {
-              name: 'Wedges'
-            }
-          ]
+					name: 'Heels'
 				},
 				{
-					name: 'Flats',
-          types: [
-            {
-              name: 'Ballet flats'
-            },
-            {
-              name: 'Loafers'
-            }
-          ]
-				}
-			]
-		},
-		{
-			name: 'Accessories',
-			subcategories: [
-				{
-					name: 'Hats & Caps',
-          types: [
-            {
-              name: 'Baseball caps'
-            },
-            {
-              name: 'Beanies'
-            }
-          ]
-				},
-				{
-					name: 'Scarves'
-				},
-				{
-					name: 'Gloves'
-				},
-				{
-					name: 'Ties'
+					name: 'Flats'
 				}
 			]
 		}

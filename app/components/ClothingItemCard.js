@@ -6,7 +6,6 @@ export default function ClothingItemCard({ name, image, category }) {
 		Bottoms: 'bg-yellow-100 text-yellow-900',
 		Outerwear: 'bg-red-100 text-red-900',
 		Footwear: 'bg-green-100 text-green-900',
-		Accessories: 'bg-purple-100 text-purple-900',
 	}
 
 	return (
