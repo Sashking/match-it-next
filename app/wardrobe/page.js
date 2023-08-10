@@ -27,3 +27,5 @@ export default async function Wardrobe() {
 		</>
 	)
 }
+
+export const dynamic = 'force-dynamic'
