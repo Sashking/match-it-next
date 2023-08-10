@@ -87,9 +87,6 @@ export default function NewItemForm({ handleReturn }) {
 			subcategories: [
 				{
 					name: 'Sneakers',
-				},
-				{
-					name: 'Dress shoes'
 				}
 			]
 		}
