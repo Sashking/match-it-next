@@ -12,7 +12,7 @@ export default async function Home() {
 	return (
 		<>
 			<h1 className="text-2xl font-bold pb-4">Home</h1>
-			<div className="flex flex-col gap-3">
+			<div className="flex flex-col gap-3 mb-16">
 				{data.map((arrayOfItems, index) => (
 					<div
 						key={index}

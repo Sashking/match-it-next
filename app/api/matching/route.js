@@ -22,7 +22,7 @@ export async function GET() {
         })
 
         const combinations = []
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 10; i++) {
             const combination = []
             for (const category in categories) {
                 const randomIndex = Math.floor(
