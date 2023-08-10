@@ -270,7 +270,7 @@ export default function NewItemForm({ handleReturn }) {
 	return (
 		<>
 			{specifics ? (
-				<NewItemSpecificsPage category={selectedCategory} subcategory={selectedSubcategory} types={typeData} handleSubmit={handleSubmit} />
+				<NewItemSpecificsPage category={selectedCategory} subcategory={selectedSubcategory} types={typeData} handleReturn={handleReturn} />
 			) : (
 				<div className="flex flex-col gap-2">
 					{categories.map(

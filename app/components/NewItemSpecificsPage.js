@@ -4,7 +4,7 @@ export default async function NewItemSpecificsPage({
 	category,
 	subcategory,
 	types,
-	handleSubmit
+	handleReturn
 }) {
 	return (
 		<>
@@ -12,7 +12,7 @@ export default async function NewItemSpecificsPage({
 				category={category}
 				subcategory={subcategory}
 				types={types}
-				handleReturn={handleSubmit}
+				handleReturn={handleReturn}
 			/>
 		</>
 	)
