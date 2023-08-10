@@ -50,14 +50,15 @@ export default function NewItemSpecifics({
 		selectedColor
 			? setColorError('')
 			: setColorError('Please select a color.')
-		selectedType ? setTypeError('') : setTypeError('Please select a type.')
+		if (types && types.length > 1)
+			selectedType ? setTypeError('') : setTypeError('Please select a type.')
 
-		if (selectedColor && selectedType) {
+		if (selectedColor && (!types || types.length === 1 || selectedType)) {
 			handleReturn({
 				category,
 				subcategory,
-				type: selectedType.name,
-				color: selectedColor.name
+				type: selectedType ? selectedType.name : null,
+				color: selectedColor.name,
 			})
 
 			router.push('/wardrobe')

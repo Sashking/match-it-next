@@ -15,7 +15,7 @@ export async function GET() {
 
 // 	const data = await request.json()
 
-//   // check if item already exists
+// 	clothes.create()
 
 
 // 	return NextResponse.json(newItem)

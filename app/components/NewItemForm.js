@@ -21,16 +21,13 @@ export default function NewItemForm({ handleReturn }) {
 					]
 				},
 				{
-					name: 'Shirts & Blouses',
+					name: 'Shirts',
 					types: [
 						{
 							name: 'Button-down shirts'
 						},
 						{
 							name: 'Dress shirts'
-						},
-						{
-							name: 'Blouses'
 						}
 					]
 				}
@@ -55,20 +52,6 @@ export default function NewItemForm({ handleReturn }) {
 				},
 				{
 					name: 'Jeans',
-				},
-				{
-					name: 'Shorts',
-					types: [
-						{
-							name: 'Denim shorts'
-						},
-						{
-							name: 'Chino shorts'
-						}
-					]
-				},
-				{
-					name: 'Skirts',
 				}
 			]
 		},
@@ -87,32 +70,6 @@ export default function NewItemForm({ handleReturn }) {
 					]
 				},
 				{
-					name: 'Coats',
-					types: [
-						{
-							name: 'Trench coats'
-						},
-						{
-							name: 'Peacoats'
-						},
-						{
-							name: 'Parkas'
-						}
-					]
-				},
-				,
-				{
-					name: 'Sweaters',
-					types: [
-						{
-							name: 'Pullover'
-						},
-						{
-							name: 'Turtleneck'
-						}
-					]
-				},
-				{
 					name: 'Hoodies & Sweatshirts',
 					types: [
 						{
@@ -122,12 +79,6 @@ export default function NewItemForm({ handleReturn }) {
 							name: 'Pullover'
 						}
 					]
-				},
-				{
-					name: 'Blazers'
-				},
-				{
-					name: 'Vests'
 				}
 			]
 		},
@@ -136,27 +87,7 @@ export default function NewItemForm({ handleReturn }) {
 			subcategories: [
 				{
 					name: 'Sneakers',
-					types: [
-						{
-							name: 'Casual sneakers'
-						},
-						{
-							name: 'Athletic sneakers'
-						}
-					]
 				},
-				{
-					name: 'Boots'
-				},
-				{
-					name: 'Sandals'
-				},
-				{
-					name: 'Heels'
-				},
-				{
-					name: 'Flats'
-				}
 			]
 		}
 	]
