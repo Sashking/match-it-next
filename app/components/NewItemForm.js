@@ -4,7 +4,7 @@ import { useState } from 'react'
 import NewItemFormCategory from './NewItemFormCategory'
 import NewItemSpecificsPage from './NewItemSpecificsPage.js'
 
-export default function NewItemForm() {
+export default function NewItemForm({ handleReturn }) {
 	const categories = [
 		{
 			name: 'Tops',
@@ -265,20 +265,6 @@ export default function NewItemForm() {
     setSelectedCategory(categories[selectedCategoryIndex].name)
     setSelectedSubcategory(categories[selectedCategoryIndex].subcategories[index].name)
     setTypeData(categories[selectedCategoryIndex].subcategories[index].types)
-	}
-
-	async function handleSubmit(data) {
-		'use server'
-
-		// async function getData(value) {
-		// 	await connectMongo()
-		  
-		// 	await clothes.updateOne(value, { inWardrobe: true })
-		  
-		// 	return await outfits.findById(id).populate('clothes')
-		// }
-
-		console.log(data)
 	}
 
 	return (
