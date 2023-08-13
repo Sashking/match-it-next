@@ -24,9 +24,9 @@ export default function Navbar() {
 
   // justify-between
 	return (
-		<nav className="flex items-center justify-between">
+		<nav className="flex items-center justify-between sticky top-0 z-10 bg-white">
 			<Link href={'/'}>
-				<p className="font-bold text-3xl">m<span className='text-blue-500'>.</span>i</p>
+				<p className="font-bold text-3xl">m<span className='text-yellow-400'>.</span>i</p>
 			</Link>
 			<div className="flex my-4 gap-3 md:gap-6">
 				{navItems.map((item, index) => (
